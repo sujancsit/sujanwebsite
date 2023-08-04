@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Designs: Sujan Basnet's Web Development Portfolio</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    
+    <style>
+      
+      footer {
+        text-align: center;
+      }
+      
+    #about {
+        
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .column {
+        flex: 1;
+    }
+
+    .column.side {
+        flex: 1;
+        margin-left: 0px; 
+    }
+
+    #about h3 {
+        margin-top: 0;
+    }
+
+    #about img {
+        display: block;
+        margin-bottom: 10px; 
+    }
+
+    #about ul {
+        list-style-type: disc;
+        padding-left: auto; 
+        margin-top: 50px;
+    }
+
+    .image-container{
+        position: relative;
+        display: inline-block;
+        margin: 10px;
+        width: 350px;
+        height: 400px;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .image-container img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 0.3s ease;
+    }
+    .image-container:hover img{
+        transform: scale(1.1);
+    }
+
+    .image-container p{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        margin: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .image-container:hover p{
+        opacity: 1;
+    }
+    .text-container{
+        right: 50px;
+        z-index: 2;
+        padding: 10px;
+    }
+    .text-container p{
+        margin: 0;
+    }
+
+
+      
+    </style>
+  
+</head>
+<body>
+   
+  <h1>Welcome to My Portfolio</h1>
+  <script>
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+ 
+	<nav>
+    <ul>
+    <a href="index.html">Home</a>
+	<a href="contact.html">Contact</a>
+	<a href="about.html">About Me</a>
+	<a href="gallery.html">Gallery</a>
+  </ul>
+</nav>
+
+
+
+<div class="loader"></div>
+
+<div style="position: absolute; top: 110px; right: 30px;">
+    
+<h2>Light/Dark</h2>
+    <input type="checkbox" class="checkbox" id="checkbox">
+    <label for="checkbox" class="checkbox-label">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <span class="ball"></span>
+    </label>
+</div>
+
+
+<script src="./script.js"></script>
+  
+
+<section id="about">
+    <h3>About Myself </h3>
+
+
+    <div class="column">
+        <div class="image-container" style="z-index: 3;">
+            <a href="nepallogo.png/myimg.jpg">
+                <img src="nepallogo.png/myimg.jpg" alt="sujan basnet">
+            </a>
+            <p><i><b> Sujan Basnet </b></i></p>
+        </div>
+        <div class="image-container" style="z-index: 2; margin-left: -175px;">
+            <a href="nepallogo.png/myimg2.jpg" onmouseover="bringToFront(this)">
+                <img src="nepallogo.png/myimg2.jpg" alt="sujan basnet">
+            </a>
+            <p><i><b> Sujan Basnet</b></i></p>
+        </div>
+
+        <div class="image-container" style="z-index: 1; margin-left: -175px;">
+            <a href="nepallogo.png/myimg4.jpg" onmouseover="bringToFront(this)">
+                <img src="nepallogo.png/myimg4.jpg" alt="sujan basnet">
+            </a>
+            <p><i><b> Sujan Basnet </b></i></p> 
+        </div>
+                
+    </div>
+
+
+
+
+
+
+
+    <div class="text-container">
+        <ul>
+            <li><b><i>My journey</i></b> in the world of development began with a burning curiosity for technology and a desire to make a positive impact.</li>
+            <li><b>Over the years</b>, I've honed my skills in app and web development, constantly seeking opportunities to learn and grow.</li>
+            <li><b>As</b> an ambitious and passionate app and web developer, I find joy in crafting digital experiences that captivate and inspire.</li>
+            <li><b>On the web development front</b>, I relish crafting captivating websites that combine stunning designs with robust functionality. </li>
+            <li><b>My passion</b> for technology and my eagerness to take on new challenges drive me forward.</li>
+            <li><b>I</b> believe that with every project, there is an opportunity to make a difference and leave a lasting impact.</li>
+            <li><b><i>Welcome to my portfolio</i></b>, where I invite you to explore my creations and witness the fusion of creativity and code. Let's collaborate and bring your digital vision to life!</li>
+        </ul>
+    </div>
+</section>
+
+
+<script>
+        function toggleMenu() {
+            const navMenu = document.querySelector('.nav ul');
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+
+
+
+
+
+ 
+  <div class="follow-Me-On-section">
+      <p>Follow Me On:</p>
+      <a href="https://www.facebook.com/profile.php?id=100071306932175&mibextid=ZbWKwL" target="_blank" title="Facebook">
+          <img src="nepallogo.png/facebooklogo.png" alt="Facebook" width="30" height="30">
+      </a>
+      <a href="https://twitter.com/SujanBasnet7206?t=pV75S2mBZ28wTOnYiR-SLA&s=09" target="_blank" title="Twitter">
+          <img src="nepallogo.png/twitter.png" alt="Twitter" width="30" height="30">
+      </a>
+      <a href="https://www.instagram.com/invites/contact/?i=1ukavdr101xbo&utm_content=ken7aso" target="_blank" title="Instagram">
+          <img src="nepallogo.png/instagram.png.svg" alt="Instagram" width="30" height="30">
+      </a>
+  </div>
+</div>
+
+
+    <footer>
+        
+    
+      <p>Copyright &copy; 2023 sujan basnet</p>
+      <img src="nepallogo.png/Logo.png" alt="Sujan basnet" width="100">
+      </footer>
+      
+      
+  
+</body>
+</html>
